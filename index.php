@@ -8,6 +8,10 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title></title>
+        <style>
+            *{padding: 0;margin: 0;}
+            body{background: #fa8072;font-size: 28px;}
+        </style>
     </head>
     <body>
         <?php
@@ -21,7 +25,7 @@ and open the template in the editor.
         $first->add_grade(65);
         $first->add_grade(75);
         $first->add_grade(55);
-        $first->status='Freshman';
+        $first->status = 'Freshman';//add status
         $students['j123'] = $first;
         $second = new Student();
         $second->surname = "Einstein";
@@ -32,9 +36,9 @@ and open the template in the editor.
         $second->add_grade(95);
         $second->add_grade(80);
         $second->add_grade(50);
-        $second->status='Junior';
+        $second->status = 'Junior';//add status
         $students['a456'] = $second;
-        $third = new Student();
+        $third = new Student();//add a third student (yourself) to the mix.
         $third->surname = "Zhong";
         $third->first_name = "YingQi";
         $third->add_email('home', '840545482@qq.com');
@@ -42,7 +46,7 @@ and open the template in the editor.
         $third->add_grade(88);
         $third->add_grade(88);
         $third->add_grade(80);
-        $third->status='Senior';
+        $third->status = 'Senior';//add status
         $students['b789'] = $third;
         $fourth = new Student();
         $fourth->surname = "Sparrow";
@@ -52,11 +56,28 @@ and open the template in the editor.
         $fourth->add_grade(66);
         $fourth->add_grade(70);
         $fourth->add_grade(85);
-        $fourth->status='Junior';
+        $fourth->status = 'Junior';//add status
         $students['c567'] = $fourth;
         ksort($students); // one of the many sort functions
         foreach ($students as $student)
             echo $student->toString();
         ?>
+        <table width="350" border="1">
+  <tr>
+    <td width="103"><?php echo("");?></td>
+    <td width="115">&nbsp;</td>
+    <td width="110">&nbsp;</td>
+  </tr>
+  <tr>
+    <td><?php echo("");?></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><?php echo("");?></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
     </body>
 </html>
