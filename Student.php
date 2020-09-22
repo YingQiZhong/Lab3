@@ -15,10 +15,10 @@ class Student {
 
     //put your code here
     function __construct() {
-        $this->surname = 'Zhong';
-        $this->first_name = 'Ying Qi';
-        $this->emails = array('840545482@qq.com');
-        $this->grades = array('set 2');
+        $this->surname = '';
+        $this->first_name = '';
+        $this->emails = array();
+        $this->grades = array();
     }
 
     function add_email($which, $address) {
