@@ -21,6 +21,7 @@ and open the template in the editor.
         $first->add_grade(65);
         $first->add_grade(75);
         $first->add_grade(55);
+        $first->status='Freshman';
         $students['j123'] = $first;
         $second = new Student();
         $second->surname = "Einstein";
@@ -31,16 +32,18 @@ and open the template in the editor.
         $second->add_grade(95);
         $second->add_grade(80);
         $second->add_grade(50);
+        $second->status='Junior';
         $students['a456'] = $second;
         $third = new Student();
         $third->surname = "Zhong";
-        $third->first_name = "Ying";
+        $third->first_name = "YingQi";
         $third->add_email('home', '840545482@qq.com');
         $third->add_email('work', '840545482@qq.com');
         $third->add_grade(88);
         $third->add_grade(88);
         $third->add_grade(80);
-        $students['b789'] = $first;
+        $third->status='Senior';
+        $students['b789'] = $third;
         ksort($students); // one of the many sort functions
         foreach ($students as $student)
             echo $student->toString();
